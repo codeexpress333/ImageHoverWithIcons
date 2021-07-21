@@ -1,0 +1,152 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,200,300,800);
+@import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
+
+body {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  overflow: hidden;
+}
+
+figure.container {
+  font-family: 'Raleway', Arial, sans-serif;
+  color: #fff;
+  position: relative;
+  float: left;
+  overflow: hidden;
+  margin: 10px 1%;
+  min-width: 220px;
+  max-width: 310px;
+  max-height: 220px;
+  width: 100%;
+  background: #000000;
+}
+
+figure.container * {
+  box-sizing: border-box;
+}
+
+figure.container img {
+  opacity: 1;
+  width: 100%;
+  transition: opacity 0.35s;
+}
+
+figure.container figcaption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: left;
+}
+
+figure.container figcaption h2 {
+  display: inline-block;
+  text-align: center;
+  border-radius: 5px;
+  margin: 0;
+  padding: 20px 15px;
+  position: absolute;
+  font-size: 1em;
+  bottom: 35%;
+  right: 30px;
+  left: 30px;
+  word-spacing: -0.1em;
+  font-weight: 300;
+  text-transform: uppercase;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.85);
+  background-color: #000000;
+  transition: transform 0.35s;
+  transform: translate(0px, 0px);
+}
+
+figure.container figcaption h2 span {
+  font-weight: 800;
+}
+
+figure.container figcaption > div {
+  border-radius: 0 0 5px 5px;
+  background-color: #fff;
+  position: absolute;
+  left: 45px;
+  right: 45px;
+  bottom: 40px;
+  text-align: center;
+  padding: 5px;
+  transition: transform 0.35s;
+  transform: translate(0, -40px);
+}
+
+figure.container figcaption > div i {
+  font-size: 23px;
+  padding: 6px;
+  color: #000000;
+  opacity: 0;
+  position: relative;
+  top: -50px;
+  transition: top 0.35s, opacity 0.35s;
+}
+
+figure.container figcaption a {
+  opacity: 0.8;
+}
+
+figure.container figcaption a:hover {
+  opacity: 1;
+}
+
+figure.container figcaption::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  content: '';
+  opacity: 0;
+  transition: opacity 0.4s;
+  background-image: linear-gradient(to top, #000000 0%, transparent 50%, #000000 100%);
+}
+figure.container:hover img,
+figure.container.hover img {
+  opacity: 0.7;
+}
+
+figure.container:hover figcaption h2,
+figure.container.hover figcaption h2 {
+  transform: translate(0, -25%);
+}
+
+figure.container:hover figcaption > div,
+figure.container.hover figcaption > div {
+  transform: translate(0, -15px);
+}
+
+figure.container:hover figcaption::before,
+figure.container.hover figcaption::before {
+  opacity: 0.8;
+}
+figure.container:hover figcaption i,
+figure.container.hover figcaption i {
+  top: 0px;
+  opacity: 0.7;
+}
+
+figure.container:hover a:first-child i,
+figure.container.hover a:first-child i {
+  transition-delay: 0.2s;
+}
+
+figure.container:hover a:nth-child(2) i,
+figure.container.hover a:nth-child(2) i {
+  transition-delay: 0.25s;
+}
+
+figure.container:hover a:nth-child(3) i,
+figure.container.hover a:nth-child(3) i {
+  transition-delay: 0.3s;
+}
+
